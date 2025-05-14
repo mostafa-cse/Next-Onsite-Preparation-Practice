@@ -40,9 +40,15 @@ Simple mathematical thinking anf Observation Problem.
 ## Problem - E(A Childhood Game) : 
 
 Fully simulation and observation base Problem. 
+
 `যদি প্রথমে শুরু করে Bob:`
+
 `    যদি n % 3 == 0 → Alice জিতবে`
+
 `    না হলে → Bob জিতবে`
+
 `যদি প্রথমে শুরু করে Alice:`
+
 `    যদি n % 3 == 1 → Bob জিতবে`
+
 `    না হলে → Alice জিতবে`
