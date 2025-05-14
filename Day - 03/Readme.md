@@ -17,3 +17,12 @@ Simple mathematical thinking anf Observation Problem.
 <div align = "center">
   <img src="https://github.com/user-attachments/assets/9d334ebd-2fc5-452f-9b00-2294909a022d" alt="Image" />
 </div>
+
+## Problem - C(Find the Good Sequence) : 
+- :two numbers are called "good" if their difference is at least 2
+- a sequence is good if the sequence is increasing
+- a sequence is good adjacent two elements are good
+- a sequence length at least 2
+Simple observation and Binary Search on answer(len) Probelem. Now determine on new observation, then optimization. When we get a sequence, this length will decrease untill it reachs into less then 2. Then agin determine this good sequence/
+Just determine the monotonic function.
+
