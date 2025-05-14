@@ -22,10 +22,14 @@ Simple mathematical thinking anf Observation Problem.
 ## Problem - C(Find the Good Sequence) : 
 
 - :two numbers are called "good" if their difference is at least 2
-- a sequence is good if the sequence is increasing
-- a sequence is good adjacent two elements are good
-- a sequence length at least 2
+- :a sequence is good if the sequence is increasing
+- :a sequence is good adjacent two elements are good
+- :a sequence length at least 2
   
 Simple observation and Binary Search on answer(len) Probelem. Now determine on new observation, then optimization. When we get a sequence, this length will decrease untill it reachs into less then 2. Then agin determine this good sequence/
 Just determine the monotonic function.
 
+## Problem - D(Iftar Party) : 
+
+Simple Number theory application. Using prime factorization of a number.
+- :determine 
