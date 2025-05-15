@@ -19,12 +19,15 @@
 ## Problem - C(A Feast for the Fans) : 
   - Read Problem statemant carefully
   - Simple Modular Arithmetic operation
+  - Some Imprtant Info : 
+<details1>
+    Month[] = {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+</details1>
 
-<details>
-    Some Imprtant Info : 
-      - int month[] = {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
-      <br>
-      - string a[] = {"", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
-      <br>
-      - int Episod[] = {0, 10, 10, 10, 10, 10, 10, 7};
+</details>
+    Month_Name[] = {"", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
+</details>
+
+</details>
+      Episod[] = {0, 10, 10, 10, 10, 10, 10, 7};
 </details>
