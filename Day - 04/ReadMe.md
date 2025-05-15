@@ -76,8 +76,11 @@
   - Simple observation Problem
   - ![image](https://github.com/user-attachments/assets/5b71e7b1-cd4c-4c05-8f00-d22e6e590ee3)
 
+## Problem - K(Collectors Problem) : 
+  
+
 ## Problem - L(Primary Arithmetic)
   - Using only simple Arithmetic Sum
   - count `Sum / 10` and `Sum /= 10`
-![image](https://github.com/user-attachments/assets/149f8b4a-3b91-4520-b472-a566f256b774)
-
+  - <details> ![image](https://github.com/user-attachments/assets/149f8b4a-3b91-4520-b472-a566f256b774)
+ </details>
