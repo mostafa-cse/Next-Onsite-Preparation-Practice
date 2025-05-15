@@ -22,6 +22,9 @@
 
 <details>
   <p> 
-    cout << "Mostaga" << endl;
+    Some Imprtant Info : 
+      - int month[] = {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+      - string a[] = {"", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
+      - int Episod[] = {0, 10, 10, 10, 10, 10, 10, 7};
   </p>
 </details>
