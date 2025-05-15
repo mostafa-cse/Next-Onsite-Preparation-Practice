@@ -82,5 +82,4 @@
 ## Problem - L(Primary Arithmetic)
   - Using only simple Arithmetic Sum
   - count `Sum / 10` and `Sum /= 10`
-  - <details> ![image](https://github.com/user-attachments/assets/149f8b4a-3b91-4520-b472-a566f256b774)
- </details>
+  - <details> <image src = "https://github.com/user-attachments/assets/149f8b4a-3b91-4520-b472-a566f256b774"> </image> </details>
