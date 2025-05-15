@@ -19,10 +19,11 @@
 ## Problem - C(A Feast for the Fans) : 
   - Read Problem statemant carefully
   - Simple Modular Arithmetic operation
-  - Some Imprtant Info : 
-<details1>
+  - Some Imprtant Info :
+    
+<details>
     Month[] = {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
-</details1>
+</details>
 
 </details>
     Month_Name[] = {"", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
