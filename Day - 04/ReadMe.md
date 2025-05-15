@@ -25,10 +25,10 @@
     Month[] = {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 </details>
 
-</details>
+<details>
     Month_Name[] = {"", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
 </details>
 
-</details>
+<details>
       Episod[] = {0, 10, 10, 10, 10, 10, 10, 7};
 </details>
