@@ -32,3 +32,52 @@
 <details>
       Episod[] = {0, 10, 10, 10, 10, 10, 10, 7};
 </details>
+
+## Problem - D(Rider) : 
+
+
+## Problem - E(The Haunted House) : 
+  - Use String substr() sunction and determine substring `string length / 2`
+  - reverse print the string
+
+## Problem - F(Intelligent Factorial Factorization) : 
+ - Read Problem statement and see casrefully the output Format
+ - Think about factorial of `N >= 10`
+ - Opp! it consists of multiplication primes
+ - determine maximum prime till `N`
+ - Now determine how many times A Prime number contribute to build this factorial
+ - Now think about `lagrange's Theorem`
+![image](https://github.com/user-attachments/assets/6666ba85-dcbf-4445-8a50-fc9953a2f971)
+
+## Problem - G(Love Letters!) 
+  - Simple maping each character
+  - if number of character is Prime then print
+  - otherwise no character has Prime number of occerences then print `Love is painful !`
+
+## Problem - H(Brush) : 
+  - Read Problem Carefully
+  - think the moving direction of the Brush
+  - it is only `vertical`, So we need only y points, ignore x
+  - Now think greedy, then Why greedy fails
+  - think about Dynamic Programming
+  - Why dp and solve
+  - how many ways we can select a point and moves from this point
+      - this point to upper
+      - this point to `width / 2` upper
+      - this point to `(width + 1) / 2` upper 
+  - ![image](https://github.com/user-attachments/assets/2c53f9c0-97d6-4a37-ba0b-4497feeac488)
+
+## Problem - I(Prochur Chhuti Lagbe (প্রচুর ছুটি লাগবে))
+  - Simple marking and observation Problem
+  - count number of days suti if this interval is not laying any of other suti
+  - then mark
+
+## Problem - J(Ecological Premium)
+  - Simple observation Problem
+  - ![image](https://github.com/user-attachments/assets/5b71e7b1-cd4c-4c05-8f00-d22e6e590ee3)
+
+## Problem - L(Primary Arithmetic)
+  - Using only simple Arithmetic Sum
+  - count `Sum / 10` and `Sum /= 10`
+![image](https://github.com/user-attachments/assets/149f8b4a-3b91-4520-b472-a566f256b774)
+
