@@ -65,7 +65,7 @@
       - this point to upper
       - this point to `width / 2` upper
       - this point to `(width + 1) / 2` upper 
-  - ![image](https://github.com/user-attachments/assets/2c53f9c0-97d6-4a37-ba0b-4497feeac488)
+  - <details> image](https://github.com/user-attachments/assets/2c53f9c0-97d6-4a37-ba0b-4497feeac488) </details> 
 
 ## Problem - I(Prochur Chhuti Lagbe (প্রচুর ছুটি লাগবে))
   - Simple marking and observation Problem
@@ -74,7 +74,7 @@
 
 ## Problem - J(Ecological Premium)
   - Simple observation Problem
-  - ![image](https://github.com/user-attachments/assets/5b71e7b1-cd4c-4c05-8f00-d22e6e590ee3)
+  - <details> <image src = "https://github.com/user-attachments/assets/5b71e7b1-cd4c-4c05-8f00-d22e6e590ee3"> </image> </details>
 
 ## Problem - K(Collectors Problem) : 
   
