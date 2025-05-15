@@ -7,6 +7,7 @@
       - Now itertive the graph and create a cycle with lowest cost
       - <img src = "https://github.com/user-attachments/assets/09506f0e-2c2e-4367-941f-2fbd5850f3cc"> </img>
 
+
 ## Problem - B(Jolly Jumpers) : 
   - determine the abssoulate difference between two consecutive element of array
   - then map this different of array
@@ -15,3 +16,12 @@
   - ![image](https://github.com/user-attachments/assets/2745e81f-bb80-4fe1-bf66-73a4e787fe43)
 
 
+## Problem - C(A Feast for the Fans) : 
+  - Read Problem statemant carefully
+  - Simple Modular Arithmetic operation
+
+<details>
+  <p> 
+    cout << "Mostaga" << endl;
+  </p>
+</details>
