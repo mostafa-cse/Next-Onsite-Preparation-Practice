@@ -22,15 +22,11 @@
   - Some Imprtant Info :
     
 <details>
-  ```cpp
     Month[] = {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
-  ```
 </details>
 
 <details>
-  ```cpp
     Month_Name[] = {"", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
-  ```
 </details>
 
 <details>
