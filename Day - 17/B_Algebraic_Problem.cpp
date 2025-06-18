@@ -1,62 +1,93 @@
-#include <bits/stdc++.h>
-#define int long long
+#include<bits/stdc++.h>
 using namespace std;
-const uint64_t MOD = (1ULL << 64);
+using namespace chrono;
 
-// Matrix multiplication function
-vector<vector<uint64_t>> matmul(const vector<vector<uint64_t>> &A, const vector<vector<uint64_t>> &B) {
-    vector<vector<uint64_t>> C(2, vector<uint64_t>(2, 0));
-    for (int i = 0; i < 2; ++i) {
-        for (int j = 0; j < 2; ++j) {
-            for (int k = 0; k < 2; ++k) {
-                C[i][j] = (C[i][j] + A[i][k] * B[k][j]) % MOD;
+/****************************************************************/
+
+#define int unsigned long long
+#define pi acos(-1.0)
+#define inf 1e18+10
+#define pb push_back
+#define ff first
+#define ss second
+#define sz(x) (int)(x).size()
+#define LSOne(x) ((x)&(-x))
+#define all(x) x.begin(), x.end()
+#define readv(v)      \
+    for (auto &x : v) \
+    cin >> x
+#define writev(v)     \
+    for (auto &x : v) \
+    cout << x << " "; \
+    cout<<endl
+#define endl "\n"
+#define yes cout<<"YES"<<endl
+#define no cout<<"NO"<<endl
+#define remove_punctuation(text) regex_replace(text, regex(R"([^\w\s])"), "")
+#define fastIO ios::sync_with_stdio(false), cin.tie(nullptr), cout.tie(nullptr)
+
+/****************************************************************/
+
+vector<vector<int>> multiply(vector<vector<int>>&a, vector<vector<int>>&b){ 
+    int n = sz(a), m = sz(a[0]);
+    vector<vector<int>>result(n,vector<int>(m,0));
+    for(int i = 0; i<n; i++){
+        for(int j = 0; j<m; j++){
+            for(int k = 0; k<m; k++){
+                result[i][j]+=(a[i][k]*b[k][j]);
             }
         }
-    }
-    return C;
-}
-
-// Matrix exponentiation function
-vector<vector<uint64_t>> matexpo(vector<vector<uint64_t>> base, uint64_t exp) {
-    vector<vector<uint64_t>> result = {{1, 0}, {0, 1}}; // Identity matrix
-    while (exp) {
-        if (exp & 1) {
-            result = matmul(result, base);
-        }
-        base = matmul(base, base);
-        exp >>= 1;
     }
     return result;
 }
 
-void solve() {
-    uint64_t p, q, n;
-    cin >> p >> q >> n;
 
-    if (n == 0) {
-        cout << "2\n"; // S_0 = 2
-        return;
+vector<vector<int>> expo(vector<vector<int>>t, int p){
+    int n = sz(t);
+    vector<vector<int>>result(n,vector<int>(n,0));
+    for(int i = 0; i<n; i++)
+        result[i][i] = 1;
+    while(p>0){
+        if(p&1)
+            result = multiply(result,t);
+        t = multiply(t,t);
+        p>>=1;
     }
-    if (n == 1) {
-        cout << p << "\n"; // S_1 = p
-        return;
-    }
-
-    // Matrix representation
-    vector<vector<uint64_t>> M = {{p, MOD - q}, {1, 0}}; // MOD - q ensures modulo arithmetic works correctly
-    vector<vector<uint64_t>> Mn = matexpo(M, n - 1);
-
-    // Compute S_n using matrix multiplication
-    uint64_t S_n = (Mn[0][0] * p + Mn[0][1] * 2) % MOD; // S_n = Mn[0][0] * S_1 + Mn[0][1] * S_0
-    cout << S_n << "\n";
+    return result;
 }
 
-signed main() {
-    int tc;
-    cin >> tc;
+void solve()
+{
+    int p,q,n;
+    cin>>p>>q>>n;
+    if(n==0){
+        cout<<2<<endl;
+        return;
+    }
+    if(n==1){
+        cout<<p<<endl;
+        return;
+    }
+    vector<vector<int>>t(2,vector<int>(2,0));
+    t[0][0] = p; t[1][0] = -q; t[0][1] = 1;
+    int f = p*p-2*q;
+    vector<vector<int>> final_m = {{f,p}};
+    t = expo(t,n-2);
+    final_m = multiply(final_m,t);
+    cout<<final_m[0][0]<<endl; 
+}
 
-    for (int t = 1; t <= tc; t++) {
-        cout << "Case " << t << ": ";
+int32_t main()
+{
+    // freopen("paint.in", "r", stdin);
+    // freopen("paint.out", "w", stdout);
+    fastIO;
+    cout.precision(10);
+    cout.setf(ios::fixed);
+    int t = 1;
+    cin >> t;
+    for(int z = 1; z<=t; z++){
+        cout<<"Case "<<z<<": ";
         solve();
     }
     return 0;
