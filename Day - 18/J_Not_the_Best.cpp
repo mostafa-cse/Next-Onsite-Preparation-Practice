@@ -1,78 +1,68 @@
-#include <bits/stdc++.h>
-using namespace std;
+#include<bits/stdc++.h>
 #define int long long
+using namespace std;
 
-const int mx = 5e3;
-vector<pair<int, int>> adj[mx];
-int dist[3][mx];
+void Solve() {
+    int n, m;
+    cin >> n >> m;
 
-struct info {
-    int u, v, w;
-};
-void dijkstra(int s, int n, int f1) {
-    for (int i = 1; i <= n; i++)
-        dist[f1][i] = 1e18;
+    vector<vector<pair<int, int>>> adj(n + 1);
+    vector<array<int, 3>> edge;
+    for (int i = 0; i < m; i++) {
+        int u, v, w;
+        cin >> u >> v >> w;
 
-    priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> pq;
+        edge.push_back({u,v,w});
+        adj[u].emplace_back(v, w);
+        adj[v].emplace_back(u, w);
+    }
+    auto dijkstra = [&](int src) {
+        vector<int> dis(n + 1, 1e18);
+        priority_queue<pair<int, int>> pq;
+        dis[src] = 0;
+        pq.push({0, src});
 
-    dist[f1][s] = 0;
-    pq.push({0, s});
-
-    while (!pq.empty()) {
-        int u = pq.top().second;
-        int curD = pq.top().first;
-        pq.pop();
-
-        if (curD > dist[f1][u])
-            continue;
-
-        for (auto v : adj[u]) {
-            if (v.second + curD < dist[f1][v.first]) {
-                dist[f1][v.first] = v.second + curD;
-                pq.push({dist[f1][v.first], v.first});
+        while (!pq.empty()) {
+            auto [d, u] = pq.top();
+            pq.pop();
+            if (d > dis[u]) continue;
+            for (auto [v, w] : adj[u]) {
+                if (w + dis[u] < dis[v]) {
+                    dis[v] = w + dis[u];
+                    pq.push({-dis[v], v});
+                }
             }
+        }
+        return dis;
+    };
+    vector<int> dis_1 = dijkstra(1);
+    vector<int> dis_n = dijkstra(n);
+
+
+    int s1 = dis_1[n], ans = 1e18;
+    for (auto [u, v, w] : edge) {
+        int cur = min(dis_1[u] + dis_n[v], dis_n[u] + dis_1[v]) + w;
+        if (cur > s1) {
+            ans = min(ans, cur);
+        }
+        if (cur == s1) {
+            ans = min(ans, cur + 2 * w);
         }
     }
+    cout << ans;
 }
-
 int32_t main() {
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);  cout.tie(0);
+    int n;
+    cin >> n;
 
-    int T;
-    cin >> T;
-    for (int tc = 1; tc <= T; tc++) {
-        for (int i = 1; i <= 5e3; i++)
-            adj[i].clear();
-
-        vector<info> edge;
-        int n, m;
-        cin >> n >> m;
-        for (int i = 1; i <= m; i++) {
-            int u, v, w;
-            cin >> u >> v >> w;
-            adj[u].push_back({v, w});
-            adj[v].push_back({u, w});
-            edge.push_back({u, v, w});
+    for (int i = 0; i < n; i++) {
+        if (i) {
+            cout << endl;
         }
-
-        dijkstra(1, n, 0);
-        dijkstra(n, n, 1);
-
-        int s1 = dist[0][n];
-        int s2 = 1e18;
-
-        for (auto e : edge) {
-            int curD =
-                min(dist[0][e.u] + dist[1][e.v], dist[1][e.u] + dist[0][e.v]);
-
-            if (curD + e.w > s1) {
-                s2 = min(s2, curD + e.w);
-            }
-
-            if (curD + e.w == s1)
-                s2 = min(s2, curD + (e.w * 3));
-        }
-
-        cout << "Case " << tc << ": " << s2 << endl;
+        cout << "Case " << i + 1 << ": ";
+        Solve();
     }
     return 0;
 }
