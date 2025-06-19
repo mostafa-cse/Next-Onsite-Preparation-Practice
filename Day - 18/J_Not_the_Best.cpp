@@ -13,8 +13,7 @@ void dijkstra(int s, int n, int f1) {
     for (int i = 1; i <= n; i++)
         dist[f1][i] = 1e18;
 
-    priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>>
-        pq;
+    priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> pq;
 
     dist[f1][s] = 0;
     pq.push({0, s});
